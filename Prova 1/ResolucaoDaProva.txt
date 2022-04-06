@@ -1,0 +1,168 @@
+================== Questão 1 ====================
+
+	#include <stdio.h>
+
+	int main() {
+		int x, y;
+		float int = 5.23;
+		printf("%f", int);
+		
+		return 0;
+	}
+
+	Dois tipos de variáveis na mesma declaração: float int = 5.23
+	Esperando receber um nome identificador da variável: float int = 5.23
+	Está esperando uma expressão antes do int: printf("%d", int)
+	
+
+
+================== Questão 2 ====================
+
+	#include <stdio.h>
+
+	int main() {
+		int n;
+		printf("Introduza um Nº: ");
+		scanf("%d\n", &n);
+		printf("O nº = %d\n", n);	
+	
+		return 0;
+	}
+
+	O uso de um '\n' dentro de um scanf faz com que sejam requeridas duas entradas de dados, gerando um mau funcionamento do código, pois não é o objetivo.
+
+================== Questão 3 ====================
+
+a)
+	if(x == 5) -> false
+b)
+	if(x == 5 || z < 0) -> true
+c)
+	if(y - x + z - 1) -> false
+d)
+	if(x == 4 || y >= z && !z) -> true
+
+================== Questão 4 ====================
+
+#include <stdio.h>
+#include <math.h>
+
+void main() {
+	char nome[50];
+	float IMC, peso, altura;
+
+	printf("Nome: ");
+	gets(nome);
+
+	printf("Peso:");
+	scanf("%f", &peso);
+
+	printf("Altura: ");
+	scanf("%f", &altura);
+
+	IMC = peso / Math.pow(altura, 2);
+
+	printf("\n%s\n", nome);
+	printf("IMC: %.2f\nStatus: ", IMC);
+
+	if(IMC < 20)
+		printf("Abaixo do peso");
+	else if(IMC >= 20 && IMC < 25)
+		printf("Normal");
+	else if(IMC >= 25 && IMC < 30)
+		printf("Escesso de peso");
+	else if(IMC >= 30 && IMC < 35)
+		printf("Obesidade");
+	else
+		printf("Obesidade mórbida");
+}
+
+================== Questão 5 ====================
+
+#include <stdio.h>
+#include <string.h>
+
+void main() {
+	char word[50];
+	int stringLength;
+		
+	printf("Palavra: ");
+	gets(word);
+
+	stringLength = strlen(word);
+	
+	if(stringLength % 2 == 0)
+		printf("Não Faço >:[");
+	else {
+		int i;
+		for(i = 1; i <= stringLength; i++) {
+			int j;
+			for(j = 0; j < i; j++){
+				printf("%s ", word);
+			}
+		printf("\n");
+		}
+	}
+}
+
+================== Questão 6 ====================
+
+#include <stdio.h>
+
+void main() {
+	int numbers[100];
+	float averageNumbers;
+	int sumNumbers = 0;
+	int qttNumbers3 = 0;
+	
+	int i = 0;
+	int escolha;
+	while(true) {
+		printf("Escolha um numero não 0 ou negativo: ");
+		scanf("%d", &numbers[i]);
+
+		if(numbers[i] <= 0)
+			return;
+
+		printf("Deseja escolher mais um numero? (1) Sim\t(0) Nao ");
+		scanf("%d", &escolha);
+
+		if(!escolha)
+			break;
+
+		i++;
+	}
+
+	int j;
+	for(j = 0; j < i; j++) {
+		if(numbers[j] % 3 == 0) {
+			sumNumbers += numbers;
+			qttNumbers3++;
+		}
+	}
+
+	averageNumbers = sumNumbers / qttNumbers3;
+	printf("A media dos numeros multiplos de 3 eh %.2f", averageNumbers);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
