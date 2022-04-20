@@ -14,7 +14,7 @@ int main() {
     printf("Digite o segundo numero: ");
     scanf("%d", &num2);
 
-    int i;
+    //int i;
     //num1 = 3
     //num2 = 2
 
@@ -22,6 +22,7 @@ int main() {
     //i = 1
     //i = 2
     //i = 3 Não faz
+    /*
     for(i = 0; i < num1; i++) {
     	printf("Agregador antes: %d\n", agregador);
         //i = 0
@@ -29,8 +30,21 @@ int main() {
         agregador  = agregador + num2;
         //agregador = 0
         printf("Agregador depois: %d\n\n", agregador);
-
     }
+    */
+
+   int i = 0;
+    while(i < num1) {
+        printf("Agregador antes: %d\n", agregador);
+        //i = 0
+        //agregador = 0
+        agregador  = agregador + num2;
+        //agregador = 0
+        printf("Agregador depois: %d\n\n", agregador);
+        i++;
+    };
+
+    
     printf("Resultado = %d", agregador);
     
     return 1;
